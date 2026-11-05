@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #201822;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        /* container das cartas */
+        main {
+            width: 100%;
+            padding: 40px 20px;
+        }
+        .categoria {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        .categoria h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .cartas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+        .flip-card {
+            width: 300px;
+            height: 450px;
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease-in-out;
+        }
+        /* flip */
+        .flip-card.is-flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+        .flip-card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+        }
+        /* o hover funciona quando passa o mouse por cima do elemento */
+        .flip-card:hover {
+            transform: scale(1.02);
+        }
+        /* parte responsiva - ver melhor depois */
+        @media (max-width: 600px) {
+            main {
+                padding: 30px 15px;
+            }
+            .flip-card {
+                width: 250px;
+                height: 375px;
+            }
+            .categoria h2 {
+                font-size: 24px;
+            }
+        }
+    </style> <!--colocar no css externo, evitar perder alguma configuração-->
+</head>
+<body>
+    <script src="node.js"></script>
+    <main>
+        <section class="categoria" id="personagens">
+            <h2>Personagens</h2>
+            <div class="cartas">
+                <button class="flip-card" type="button"
+                    aria-label="Carta de Celeste. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Celeste.jpeg" class="flip-card-image" alt="Frente da carta Celeste">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Celeste">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button"
+                    aria-label="Carta de Marissa. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Marissa.png" class="flip-card-image" alt="Frente da carta Marissa">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Marissa">
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </section>
+        <section class="categoria" id="armas">
+            <h2>Armas</h2>
+            <div class="cartas">
+                <button class="flip-card" type="button" aria-label="Carta da Pá. Clique para virar."> 
+                    <div class="flip-card-inner">
+                         <div class="flip-card-front">
+                            <img src="src/imagens/Pá.png" class="flip-card-image" alt="Frente da carta Pá">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Pá">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Presa. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Presa.png" class="flip-card-image" alt="Frente da carta Presa">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Presa">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta do Livro Encantado. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/livro encantado.png" class="flip-card-image" alt="Frente da carta Livro Encantado">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Livro Encantado">
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </section>
+        <section class="categoria" id="cenarios">
+            <h2>Cenários</h2>
+            <div class="cartas">
+                <button class="flip-card" type="button" aria-label="Carta do Altar de Cristais. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Altar.png" class="flip-card-image" alt="Frente da carta Altar de Cristais">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Altar de Cristais">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Caverna Dentuça. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Caverna .png" class="flip-card-image" alt="Frente da carta Caverna Dentuça">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Caverna Dentuça">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Floresta dos Cogulecentes. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Cogulecentes .png" class="flip-card-image" alt="Frente da carta Floresta dos Cogulecentes">
+                        </div>
+                        <div class="flip-card-back"> <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Floresta dos Cogulecentes">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Feirinha Mágica. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Feirinha .png" class="flip-card-image" alt="Frente da carta Feirinha Mágica">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Feirinha Mágica">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta do Lago das Memórias. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Lago.png"  class="flip-card-image" alt="Frente da carta Lago das Memórias">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image"alt="Verso da carta Lago das Memórias">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Ponte dos Vagalumes. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Ponte.png" class="flip-card-image" alt="Frente da carta Ponte dos Vagalumes">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg"  class="flip-card-image" alt="Verso da carta Ponte dos Vagalumes">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Taverna O Copo do Búfalo. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Taverna.png"  class="flip-card-image"   alt="Frente da carta Taverna O Copo do Búfalo">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg"  class="flip-card-image" alt="Verso da carta Taverna O Copo do Búfalo">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Torre do Astrólogo. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img  src="src/imagens/Torre do astrologo.png" class="flip-card-image" alt="Frente da carta Torre do Astrólogo">
+                        </div>
+                        <div class="flip-card-back">
+                            <img
+                                src="src/imagens/costascarta.jpeg"
+                                class="flip-card-image"
+                                alt="Verso da carta Torre do Astrólogo">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Torre de Dados. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/.png" class="flip-card-image" alt="frente da carta da Torre de Dados">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Torre de Dados"> </div>
+                    </div>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

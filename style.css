@@ -1,0 +1,214 @@
+/*header ul {
+    list-style-type: none;
+    margin-right: 0;
+    font-size: 15px;
+}
+header a {
+    text-decoration: none;
+    font-weight: bold;
+    color: blueviolet;
+}
+header a :hover {
+    text-decoration: underline;
+}
+main {
+    padding: 32px 0;
+}
+@media (max-width: 760px) {
+    header > .center {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+}
+.logo .menu {
+    width: 100%;
+    text-align: left;
+}
+.menu ul {
+    margin-top: 12px;
+}
+header li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+}    NAO FUNCIONO - Dessa parte para cima é da ultima aula, tentando arrumar o header, main e footer*/
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cabeçalho {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 5%;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: hsl(288, 17%, 11%); /* background: hsl(288, 17%, 11%) */
+    color: white;
+}
+nav {
+    width: auto;
+    padding: 1rem 5%;
+    /*background:rgba(255, 255, 255, 0.05);*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.logo {
+    width: 300px;
+    text-align: center;
+    flex-shrink: 0; /*impede que a logo seja comprimida*/
+}
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+.nav-links li a {
+    position: relative;
+    font-size: 1.55rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(123, 66, 180);
+    transition: 0.3s;
+} 
+.nav-links li a:hover {
+    color: rebeccapurple;
+    text-shadow: 0 0 10px rebeccapurple;
+}
+
+
+.btns {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+
+}
+.btn {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: rebeccapurple;
+    color: #dbb9e3;
+    box-shadow: 0 0 8px rebeccapurple;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn a:link {
+    text-decoration: none;
+    color: #dbb9e3;
+}
+.btn:hover {
+    background: rgb(70, 31, 109);
+    box-shadow: 0 0 25px rgb(70, 31, 109);  
+}
+
+
+.história {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 90%;
+    margin: 50px auto;
+}
+.texto-história {
+    flex: 1;
+}
+.texto-história p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.história img {
+    width: 30%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* container das cartas que ta com erro XD - cartas sobrepostas
+#container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    justify-content: center;
+    background-color: #201822;
+    background: size 100%;
+    background-repeat: repeat;
+}
+#container div {
+    width: 300px;
+    height: 450px;
+}
+.flip-card {
+    width: 300px;
+    height: 450px;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card .flip-card-back {
+    transform: rotateY(180deg);
+}
+.flip-card-inner {
+    position: relative;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    cursor: pointe;
+}
+.flip-card-back,
+.flip-card-front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flip-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+a partir daqui eu estou tentando coisas pela intuição/ feeling, sujeito a muitos erros*/
+
+.footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: hsl(288, 40%, 71%); /* background: hsl(288, 17%, 11%) */
+    color: white;
+    text-align: center;
+}
+.footer-content {
+    max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
