@@ -1,40 +1,5 @@
-/*header ul {
-    list-style-type: none;
-    margin-right: 0;
-    font-size: 15px;
-}
-header a {
-    text-decoration: none;
-    font-weight: bold;
-    color: blueviolet;
-}
-header a :hover {
-    text-decoration: underline;
-}
-main {
-    padding: 32px 0;
-}
-@media (max-width: 760px) {
-    header > .center {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 14px;
-        padding-bottom: 14px;
-    }
-}
-.logo .menu {
-    width: 100%;
-    text-align: left;
-}
-.menu ul {
-    margin-top: 12px;
-}
-header li {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 15px;
-}    NAO FUNCIONO - Dessa parte para cima é da ultima aula, tentando arrumar o header, main e footer*/
-        * {
+/* geral */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,18 +13,10 @@ header li {
     padding: 15px 5%;
 }
 
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: hsl(288, 17%, 11%); /* background: hsl(288, 17%, 11%) */
-    color: white;
-}
 nav {
     width: auto;
     padding: 1rem 5%;
-    /*background:rgba(255, 255, 255, 0.05);*/
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
-    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,13 +24,15 @@ nav {
 }
 .logo {
     width: 300px;
-    text-align: center;
     flex-shrink: 0; /*impede que a logo seja comprimida*/
 }
 .logo img {
     width: 100%;
     height: auto;
+    display: block;
 }
+
+/* links menu 
 
 .nav-links {
     list-style: none;
@@ -81,7 +40,7 @@ nav {
     gap: 4rem;
 }
 .nav-links li a {
-    position: relative;
+    position: fixed;
     font-size: 1.55rem;
     font-weight: 500;
     text-decoration: none;
@@ -91,22 +50,31 @@ nav {
 .nav-links li a:hover {
     color: rebeccapurple;
     text-shadow: 0 0 10px rebeccapurple;
+} */
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
 }
 
+/* botões menu */
 
 .btns {
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* display flex permite manipula mais livremente os componentes em questão*/
+    text-decoration: none; /* tira o sublinhado do link*/
+    align-items: center; /* botões alinhandos pelo centro*/
+    gap: 20px; /* espaço de 20px entre botões, em casos de responsividade com diferentes tamanhos de aparelhos, px não é a melhor medida*/
 
 }
 .btn {
+    display: inline-block;
     text-decoration: none;
     color: inherit;
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 1.7rem;
     border-radius: 20px;
-    margin-right: 10px;
     font-weight: 600;
     font-size: 1rem;
     background: rebeccapurple;
@@ -116,20 +84,37 @@ nav {
     cursor: pointer;
     transition: 0.3s;
 }
-.btn a:link {
+/*.btn:link,
+.btn:visited {
     text-decoration: none;
     color: #dbb9e3;
-}
+}*/
+/*hover é uma pseeudoclasse que aplica configurações quando o usuário passa o mouse sobre um elemento*/
 .btn:hover {
     background: rgb(70, 31, 109);
-    box-shadow: 0 0 25px rgb(70, 31, 109);  
+    box-shadow: 0 0 25px rgb(70, 31, 109);  /*ganha uma sombra na caixa*/
 }
 
+/* corpo da página */
+body {
+    @font-face {
+        font-family: 'Paquito-Regular';
+        src: url('../fonts/Paquito-Regular.woff2') format('woff2'),
+             url('../fonts/Paquito-Regular.woff') format('woff'),
+             url('../fonts/Paquito-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+      }
+    background: hsl(288, 17%, 11%); /* background: hsl(288, 17%, 11%) */
+    color: white;
+}
 
 .história {
     display: flex;
-    align-items: center;
+    align-items: center; /*centraliza verticalmente os elementos*/
     justify-content: space-between;
+    text-size-adjust: 50%;
     gap: 40px;
     width: 90%;
     margin: 50px auto;
@@ -143,72 +128,210 @@ nav {
     text-align: justify;
 }
 .história img {
-    width: 30%;
-    max-width: 450px;
-    height: auto;
-    object-fit: contain;
+    width: 50%;
+    max-width: 450px; /*impede que ela ultrapasse 450 pixels*/
+    height: auto; /*preserva a proporção*/
+    object-fit: contain; /*faz a imagem caber na área definida sem cortar seu conteúdo.*/
 }
-
-/* container das cartas que ta com erro XD - cartas sobrepostas
-#container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    min-height: 300px;
-    justify-content: center;
-    background-color: #201822;
-    background: size 100%;
-    background-repeat: repeat;
-}
-#container div {
-    width: 300px;
-    height: 450px;
-}
-.flip-card {
-    width: 300px;
-    height: 450px;
-}
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-.flip-card .flip-card-back {
-    transform: rotateY(180deg);
-}
-.flip-card-inner {
-    position: relative;
-    transition: transform 1s ease-in-out;
-    transform-style: preserve-3d;
-    cursor: pointe;
-}
-.flip-card-back,
-.flip-card-front {
-    position: absolute;
-    backface-visibility: hidden;
-}
-.flip-card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-a partir daqui eu estou tentando coisas pela intuição/ feeling, sujeito a muitos erros*/
 
 .footer {
     position: static;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: sans-serif;
     background-color: hsl(288, 40%, 71%); /* background: hsl(288, 17%, 11%) */
     color: white;
     text-align: center;
 }
 .footer-content {
     max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    gap: 10px;
+}
+.footer img {
+    width: 15%;
+    height: auto;
+}
+
+
+/* regras */
+#container-regras {
+    height: auto;
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #201822;
+    background: size 100%;
+    background-repeat: repeat;
+}
+.container-regras h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #dbb9e3;
+}
+.regras-secao {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.regras-secao h2 {
+    color: #dbb9e3;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 12px;
+}
+.regras-secao p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.regras-secao p:last-child {
+    margin-bottom: 0;
+}
+
+
+/*cartas*/
+/*container das cartas */
+main {
+    width: 100%;
+    padding: 40px 20px;
+}
+.categoria {
+    width: 100%;
+    margin-bottom: 60px;
+}
+.categoria h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.cartas {
+    display: flex;
+    flex-wrap: wrap; /* pesquisar melhor, não entendi direito */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.flip-card {
+    width: 300px;
+    height: 450px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    perspective: 1000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+/* flip */
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; /* pra esconder a parte da carta que não ta mostrando no momento - mostra só a frente ou só o verso*/
+    -webkit-backface-visibility: hidden;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+.flip-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+/* o hover funciona quando passa o mouse por cima do elemento */
+.flip-card:hover {
+    transform: scale(1.02);
+}
+/* parte responsiva - ver melhor depois */
+@media (max-width: 600px) {
+    main {
+        padding: 30px 15px;
+    }
+    .flip-card {
+        width: 250px;
+        height: 375px;
+    }
+    .categoria h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* equipe */
+
+
+
+@media screen and (max-width: 1000px) {
+    section.apresentacao
+    .cabeçalho {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    .btns {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .história {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .história img {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .container-regras {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .regras-secao {
+        padding: 20px;
+    }
+
+    .container-regras h1 {
+        font-size: 1.6rem;
+    }
+
+    .regras-secao h2 {
+        font-size: 1.25rem;
+    }
+
+    .regras-secao p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
 }

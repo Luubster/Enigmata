@@ -1,4 +1,4 @@
-//const carta = document.getElementById('cartas');
+const carta = document.querySelectorAll('cartas');
 
 //carta.addEventListener('click', () => {
   //carta.classList.toggle('flipped');
