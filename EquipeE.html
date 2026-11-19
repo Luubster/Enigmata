@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>EnigEquipe</title>
 </head>
-<body>
-    
+<body> 
+    <header> 
+        <div class="cabeçalho"> 
+            <div class="logo">
+                <a href="index.html">  
+                    <img src="src/imagens/logos pim-01.png" alt="Logo Enigmata">
+                </a>
+            </div>
+
+            <nav>    
+                <div class="btns"> <!-- classe geral para personalizar todos os botões e uma vez-->
+                    <a class="btn" href="Home.html">Home</a> <!--link da págima externa de cada botão-->
+                    <a class="btn" href="Regras.html">Regras</a>
+                    <a class="btn" href="Cartas.html">Cartas</a>
+                    <a class="btn" href="EquipeE.html">Equipe E</a>
+                </div>
+            </nav> 
+        </div>
+    </header> 
+    <main>
+        <section class="categoria" id="equipe">
+            <h2> Equipe de desenvolvedores </h2>
+                <div class="cartas"> <!-- colocar as formas de forma que voce possa movimentar para o lado e ver as outras - acho que galeria no js funciona-->
+                    <button class="flip-card" type="button"
+                        aria-label="Carta de Julia. Clique para virar.">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="src/imagens/ju.png" class="flip-card-image" alt="Frente da carta Julia">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Julia">
+                            </div>
+                        </div>
+                    </button>
+                    <button class="flip-card" type="button"
+                        aria-label="Carta de Luzia. Clique para virar.">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="src/imagens/lu.png" class="flip-card-image" alt="Frente da carta Luzia">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Luzia">
+                            </div>
+                        </div>
+                    </button>
+                    <button class="flip-card" type="button"
+                        aria-label="Carta de Maria Eduarda. Clique para virar.">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="src/imagens/madu.png" class="flip-card-image" alt="Frente da carta Maria Eduarda">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Maria Eduarda">
+                            </div>
+                        </div>
+                    </button>
+                    <button class="flip-card" type="button"
+                        aria-label="Carta de Thaina. Clique para virar.">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="src/imagens/thai.png" class="flip-card-image" alt="Frente da carta Thaina">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Thaina">
+                            </div>
+                        </div>
+                    </button>
+                    <button class="flip-card" type="button"
+                        aria-label="Carta de Yasmin. Clique para virar.">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="src/imagens/yas.png" class="flip-card-image" alt="Frente da carta Yasmin">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Yasmin">
+                            </div>
+                        </div>
+                    </button>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <ul>
+                <li>
+                    <img src="src/imagens/Mystik logo.png" alt="Logo Mystik Boardgames" >
+                </li>
+            </ul>
+            <p> &copy; Empresa Mystik Boardgames. 
+                Todos os direitos reservados.
+            </p>
+            <p>
+                MYSTIK BOADGAMES S.A. | CNPJ: 28.845.635/0001-10 | SAC MYSTIK@BOARDGAMES.IND.BR | 11 99327-8777 
+           </p>
+
+        </div>
+    </footer>
+
 </body>
 </html>
