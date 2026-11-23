@@ -10,7 +10,6 @@
     //});
 //});
 
-
 // Seleciona todas as cartas da página
 const cartas = document.querySelectorAll(".flip-card");
 
