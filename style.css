@@ -355,7 +355,7 @@ main {
 }
 .categoria h2 {
     color: #dbb9e3;
-    width: 30%;
+    width: 45%;
     margin: 20px auto 10px;
     justify-content: center;
     align-items: center;
@@ -364,9 +364,7 @@ main {
     margin-bottom: 30px;
     border-radius: 15px;
     gap: 25px;
-
 }
-
 /*.carrossel {
     margin: 100px auto;
     width: 90%;
