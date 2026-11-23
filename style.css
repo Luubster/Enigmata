@@ -145,6 +145,7 @@ body {
     align-items: stretch;
 }
 
+
 .cogumelos {
     width: 190px;
     display: flex;
@@ -223,7 +224,7 @@ body {
 .regras-secao {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.05);
-    margin: 0 0;
+    margin: 5px;
     border-radius: 15px;
 }
 .regras-secao h2 {
