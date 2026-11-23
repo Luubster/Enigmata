@@ -349,21 +349,22 @@ main {
 /* CONTAINER DAS CARTAS */
 
 .categoria {
+    display: flex;
     text-align: center;
-    padding: 15px;
-    
-    
+    flex-direction: column;
 }
 .categoria h2 {
     color: #dbb9e3;
     width: 30%;
-    margin: 0 auto 30px;
+    margin: 20px auto 10px;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.05);
-    padding: 25px;
+    padding: 5px;
     margin-bottom: 30px;
     border-radius: 15px;
+    gap: 25px;
+
 }
 
 /*.carrossel {
