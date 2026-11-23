@@ -116,7 +116,7 @@ body {
     align-items: center; /*centraliza verticalmente os elementos*/
     justify-content: space-between;
     text-size-adjust: 50%;
-    gap: 40px;
+    gap: 60px;
     width: 90%;
     margin: 50px auto;
     text-align: justify;
@@ -132,11 +132,38 @@ body {
     text-align: justify;
 }
 .história img {
-    width: 50%;
+    width: 80%;
     max-width: 450px; /*impede que ela ultrapasse 450 pixels*/
     height: auto; /*preserva a proporção*/
     object-fit: contain; /*faz a imagem caber na área definida sem cortar seu conteúdo.*/
+    flex-shrink: 0;
 }
+
+.final-pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.cogumelos {
+    width: 190px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-end;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-bottom: 0;
+    padding: 0;
+    transform: rotate(180deg);
+}
+    
+.cogumelos img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 .footer {
     position: static;
@@ -145,15 +172,19 @@ body {
     background-color: rebeccapurple; /* background: hsl(288, 17%, 11%)     rgba(255, 255, 255, 0.05)   #FFD34E     */
     color: #dbb9e3;
     text-align: center;
+    margin-top: 0;
 }
 .footer-content {
     max-width: 1200px;
+    list-style: none;
     margin: 0 auto;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: baseline;
     gap: 10px;
+    
 }
 .footer img {
     width: 15%;
@@ -161,35 +192,38 @@ body {
 }
 
 
+.grimorio {
+    width: 250px;
+    margin: 0;
+}
+    
+.grimorio img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* regras */
 .container-regras {
-    /*height: auto;
-    width: 90%;
-    max-width: 1100px;
-    padding: 0;
-    margin: 50px auto;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    background-color: #201822;
-    background-size: 100%;
-    background-repeat: repeat;*/
-    width: 85%;
+    width: 95%;
     max-width: 950px;
-    margin: 50px auto;
+    margin: 20px auto 20px;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 .container-regras h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0;
     font-size: 2rem;
     color: #dbb9e3;
 }
 .regras-secao {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    margin-bottom: 30px;
+    margin: 0 0;
     border-radius: 15px;
 }
 .regras-secao h2 {
@@ -207,7 +241,10 @@ body {
     margin-bottom: 15px;
 }
 .regras-secao ul {
-    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 .regras-secao p:last-child {
     margin-bottom: 0;
@@ -302,12 +339,53 @@ main {
 
 /* CONTAINER DAS CARTAS */
 
+.categoria {
+    text-align: center;
+    padding: 15px;
+    
+    
+}
+.categoria h2 {
+    color: #dbb9e3;
+    width: 30%;
+    margin: 0 auto 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+/*.carrossel {
+    margin: 100px auto;
+    width: 90%;
+    border: 5px;
+    display: flex;
+    overflow-x: auto;
+}
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+.carrossel-grupo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 5s infinite linear;
+
+}*/
+
+
 .cartas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 25px;
+    margin-top: 15px;
+    flex: 0 0 5em;
+    align-content: center;
 }
 
 /* CARTA PRINCIPAL */
@@ -441,4 +519,8 @@ main {
         text-align: left;
     }
 
+}
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
 }

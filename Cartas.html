@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <title>EnigCartas</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnigCartas</title>
     <link rel="stylesheet" href="style.css">
     <!--<style>
         * {
@@ -126,75 +126,78 @@
 
         <section class="categoria" id="personagens">
             <h2>Personagens</h2>
-            <div class="cartas"> <!-- colocar as formas de forma que voce possa movimentar para o lado e ver as outras - acho que galeria no js funciona-->
-                <button class="flip-card" type="button"
-                    aria-label="Carta de Celeste. Clique para virar.">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="src/imagens/Celeste.jpeg" class="flip-card-image" alt="Frente da carta Celeste">
-                        </div>
-                        <div class="flip-card-back">
-                            <img src="src/imagens/costascarta Celeste.png" class="flip-card-image" alt="Verso da carta Celeste">
-                        </div>
+            <!--<div class="carrossel"> 
+                <div class="carrossel-grupo"> -->
+                    <div class="cartas"> <!-- colocar as formas de forma que voce possa movimentar para o lado e ver as outras - acho que galeria no js funciona-->
+                        <button class="flip-card" type="button"
+                            aria-label="Carta de Celeste. Clique para virar.">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="src/imagens/Celeste.png" class="flip-card-image" alt="Frente da carta Celeste">
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src="src/imagens/costascarta Celeste.png" class="flip-card-image" alt="Verso da carta Celeste">
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flip-card" type="button"
+                            aria-label="Carta de Marissa. Clique para virar.">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="src/imagens/Marissa.png" class="flip-card-image" alt="Frente da carta Marissa">
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src="src/imagens/costascarta Marissa.png" class="flip-card-image" alt="Verso da carta Marissa">
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flip-card" type="button"
+                            aria-label="Carta de Webbet. Clique para virar.">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="src/imagens/Webbet.png" class="flip-card-image" alt="Frente da carta Webbet">
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src="src/imagens/costascarta Webbet.png" class="flip-card-image" alt="Verso da carta Webbet">
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flip-card" type="button"
+                            aria-label="Carta de Bóreon. Clique para virar.">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="src/imagens/Bóreon.png" class="flip-card-image" alt="Frente da carta Bóreon">
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src="src/imagens/costascarta Bóreon.png" class="flip-card-image" alt="Verso da carta Bóreon">
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flip-card" type="button"
+                            aria-label="Carta de Violet. Clique para virar.">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="src/imagens/Violet.png" class="flip-card-image" alt="Frente da carta Violet">
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src="src/imagens/costascarta Violet.png" class="flip-card-image" alt="Verso da carta Violet">
+                                </div>
+                            </div>
+                        </button>
+                        <button class="flip-card" type="button"
+                            aria-label="Carta de Âmbar. Clique para virar.">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="src/imagens/Âmbar.png" class="flip-card-image" alt="Frente da carta Âmbar">
+                                </div>
+                                <div class="flip-card-back">
+                                    <img src="src/imagens/costascarta Âmbar.png" class="flip-card-image" alt="Verso da carta Âmbar">
+                                </div>
+                            </div>
+                        </button>
                     </div>
-                </button>
-                <button class="flip-card" type="button"
-                    aria-label="Carta de Marissa. Clique para virar.">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="src/imagens/Marissa.png" class="flip-card-image" alt="Frente da carta Marissa">
-                        </div>
-                        <div class="flip-card-back">
-                            <img src="src/imagens/costascarta Marissa.png" class="flip-card-image" alt="Verso da carta Marissa">
-                        </div>
-                    </div>
-                </button>
-                <button class="flip-card" type="button"
-                    aria-label="Carta de Webbet. Clique para virar.">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="src/imagens/Webbet.png" class="flip-card-image" alt="Frente da carta Webbet">
-                        </div>
-                        <div class="flip-card-back">
-                            <img src="src/imagens/costascarta Webbet.png" class="flip-card-image" alt="Verso da carta Webbet">
-                        </div>
-                    </div>
-                </button>
-                <button class="flip-card" type="button"
-                    aria-label="Carta de Bóreon. Clique para virar.">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="src/imagens/Bóreon.png" class="flip-card-image" alt="Frente da carta Bóreon">
-                        </div>
-                        <div class="flip-card-back">
-                            <img src="src/imagens/costascarta Bóreon.png" class="flip-card-image" alt="Verso da carta Bóreon">
-                        </div>
-                    </div>
-                </button>
-                <button class="flip-card" type="button"
-                    aria-label="Carta de Violet. Clique para virar.">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="src/imagens/Violet.png" class="flip-card-image" alt="Frente da carta Violet">
-                        </div>
-                        <div class="flip-card-back">
-                            <img src="src/imagens/costascarta Violet.png" class="flip-card-image" alt="Verso da carta Violet">
-                        </div>
-                    </div>
-                </button>
-                <button class="flip-card" type="button"
-                    aria-label="Carta de Âmbar. Clique para virar.">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="src/imagens/Âmbar.png" class="flip-card-image" alt="Frente da carta Âmbar">
-                        </div>
-                        <div class="flip-card-back">
-                            <img src="src/imagens/costascarta Âmbar.png" class="flip-card-image" alt="Verso da carta Âmbar">
-                        </div>
-                    </div>
-                </button>
-
-            </div>
+                <!--</div>
+            </div>-->
         </section>
 
         <section class="categoria" id="armas">
@@ -203,10 +206,10 @@
                 <button class="flip-card" type="button" aria-label="Carta da Pá. Clique para virar."> 
                     <div class="flip-card-inner">
                          <div class="flip-card-front">
-                            <img src="src/imagens/Pá.png" class="flip-card-image" alt="Frente da carta Pá">
+                            <img src="src/imagens/Pá de terra.png" class="flip-card-image" alt="Frente da carta Pá">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Pá">
+                            <img src="src/imagens/pá de terra verso.png" class="flip-card-image" alt="Verso da carta Pá">
                         </div>
                     </div>
                 </button>
@@ -216,17 +219,47 @@
                             <img src="src/imagens/Presa.png" class="flip-card-image" alt="Frente da carta Presa">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Presa">
+                            <img src="src/imagens/presa envenenada verso.png" class="flip-card-image" alt="Verso da carta Presa">
                         </div>
                     </div>
                 </button>
-                <button class="flip-card" type="button" aria-label="Carta do Livro Encantado. Clique para virar.">
+                <button class="flip-card" type="button" aria-label="Carta do Grimório. Clique para virar.">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="src/imagens/livro encantado.png" class="flip-card-image" alt="Frente da carta Livro Encantado">
+                            <img src="src/imagens/Grimório.png" class="flip-card-image" alt="Frente da carta Grimório">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Livro Encantado">
+                            <img src="src/imagens/grimório verso.png" class="flip-card-image" alt="Verso da carta Grimório">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta da Foice. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Foice.png" class="flip-card-image" alt="Frente da carta Foice">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/foice verso.png" class="flip-card-image" alt="Verso da carta Foice">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta do Arco e Flecha. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Arco e flecha.png" class="flip-card-image" alt="Frente da carta Arco e Flecha">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/arco e flecha verso.png" class="flip-card-image" alt="Verso da carta Arco e Flecha">
+                        </div>
+                    </div>
+                </button>
+                <button class="flip-card" type="button" aria-label="Carta do Cajado. Clique para virar.">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="src/imagens/Cajado.png" class="flip-card-image" alt="Frente da carta Cajado">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="src/imagens/cajado verso.png" class="flip-card-image" alt="Verso da carta Cajado">
                         </div>
                     </div>
                 </button>
@@ -242,36 +275,36 @@
                             <img src="src/imagens/Altar.png" class="flip-card-image" alt="Frente da carta Altar de Cristais">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Altar de Cristais">
+                            <img src="src/imagens/altar dos cristais verso.png" class="flip-card-image" alt="Verso da carta Altar de Cristais">
                         </div>
                     </div>
                 </button>
                 <button class="flip-card" type="button" aria-label="Carta da Caverna Dentuça. Clique para virar.">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="src/imagens/Caverna .png" class="flip-card-image" alt="Frente da carta Caverna Dentuça">
+                            <img src="src/imagens/Caverna dentuça.png" class="flip-card-image" alt="Frente da carta Caverna Dentuça">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Caverna Dentuça">
+                            <img src="src/imagens/caverna dentuça verso.png" class="flip-card-image" alt="Verso da carta Caverna Dentuça">
                         </div>
                     </div>
                 </button>
                 <button class="flip-card" type="button" aria-label="Carta da Floresta dos Cogulecentes. Clique para virar.">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="src/imagens/Cogulecentes .png" class="flip-card-image" alt="Frente da carta Floresta dos Cogulecentes">
+                            <img src="src/imagens/Floresta dos Cogulescentes.png" class="flip-card-image" alt="Frente da carta Floresta dos Cogulescentes">
                         </div>
-                        <div class="flip-card-back"> <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Floresta dos Cogulecentes">
+                        <div class="flip-card-back"> <img src="src/imagens/floresta do cogulescentes verso.png" class="flip-card-image" alt="Verso da carta Floresta dos Cogulescentes">
                         </div>
                     </div>
                 </button>
                 <button class="flip-card" type="button" aria-label="Carta da Feirinha Mágica. Clique para virar.">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="src/imagens/Feirinha .png" class="flip-card-image" alt="Frente da carta Feirinha Mágica">
+                            <img src="src/imagens/Feirinha.png" class="flip-card-image" alt="Frente da carta Feirinha Mágica">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Feirinha Mágica">
+                            <img src="src/imagens/feirinha verso.png" class="flip-card-image" alt="Verso da carta Feirinha Mágica">
                         </div>
                     </div>
                 </button>
@@ -281,7 +314,7 @@
                             <img src="src/imagens/Lago.png"  class="flip-card-image" alt="Frente da carta Lago das Memórias">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image"alt="Verso da carta Lago das Memórias">
+                            <img src="src/imagens/lago das memórias verso.png" class="flip-card-image"alt="Verso da carta Lago das Memórias">
                         </div>
                     </div>
                 </button>
@@ -291,7 +324,7 @@
                             <img src="src/imagens/Ponte.png" class="flip-card-image" alt="Frente da carta Ponte dos Vagalumes">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg"  class="flip-card-image" alt="Verso da carta Ponte dos Vagalumes">
+                            <img src="src/imagens/ponte dos vagalumes verso.png"  class="flip-card-image" alt="Verso da carta Ponte dos Vagalumes">
                         </div>
                     </div>
                 </button>
@@ -301,52 +334,39 @@
                             <img src="src/imagens/Taverna.png"  class="flip-card-image"   alt="Frente da carta Taverna O Copo do Búfalo">
                         </div>
                         <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg"  class="flip-card-image" alt="Verso da carta Taverna O Copo do Búfalo">
+                            <img src="src/imagens/taverna dos touros verso.png"  class="flip-card-image" alt="Verso da carta Taverna O Copo do Búfalo">
                         </div>
                     </div>
                 </button>
                 <button class="flip-card" type="button" aria-label="Carta da Torre do Astrólogo. Clique para virar.">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img  src="src/imagens/Torre do astrologo.png" class="flip-card-image" alt="Frente da carta Torre do Astrólogo">
+                            <img  src="src/imagens/Torre do astrólogo.png" class="flip-card-image" alt="Frente da carta Torre do Astrólogo">
                         </div>
                         <div class="flip-card-back">
                             <img
-                                src="src/imagens/costascarta.jpeg"
-                                class="flip-card-image"
-                                alt="Verso da carta Torre do Astrólogo">
+                                src="src/imagens/torre do astrologo verso.png" class="flip-card-image" alt="Verso da carta Torre do Astrólogo">
                         </div>
-                    </div>
-                </button>
-                <button class="flip-card" type="button" aria-label="Carta da Torre de Dados. Clique para virar.">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="src/imagens/.png" class="flip-card-image" alt="frente da carta da Torre de Dados">
-                        </div>
-                        <div class="flip-card-back">
-                            <img src="src/imagens/costascarta.jpeg" class="flip-card-image" alt="Verso da carta Torre de Dados"> </div>
                     </div>
                 </button>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <ul>
-                <li>
-                    <img src="src/imagens/Mystik logo.png" alt="Logo Mystik Boardgames" >
-                </li>
-            </ul>
-            <p> &copy; Empresa Mystik Boardgames. 
-                Todos os direitos reservados.
-            </p>
-            <p>
-                MYSTIK BOADGAMES S.A. | CNPJ: 28.845.635/0001-10 | SAC MYSTIK@BOARDGAMES.IND.BR | 11 99327-8777 
-           </p>
+    <div class="final-pagina">
+        <!--rodapé-->
+        <footer class="footer">
+            <div class="footer-content">
+                <img src="src/imagens/logo mystik branco.png" alt="Logo Mystik Boardgames" >
+                <p> &copy; Empresa Mystik Boardgames. 
+                    Todos os direitos reservados.
+                </p>
+                <p>
+                    MYSTIK BOADGAMES S.A. | CNPJ: 28.845.635/0001-10 | SAC MYSTIK@BOARDGAMES.IND.BR | 11 99327-8777 
+                </p>
 
-        </div>
-    </footer>
-
+            </div>
+        </footer>
+    </div>    
 </body>
 </html>
